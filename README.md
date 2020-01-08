@@ -1,5 +1,5 @@
 
-Assignment: Node Express Handlebars - burguer
+Assignment: Node Express Handlebars - burger
 
 
 Overview:
