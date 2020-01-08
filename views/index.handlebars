@@ -1,0 +1,60 @@
+
+<div style="background:light-blue;opacity:0.8;" class="jumbotron" id="jumbotron">
+    <div class="container text-center">
+        <h1>Eat-Da-Burger Place </h1>
+        <p>Please select a burger from the menu to devour it.<br>Or you can add your own custom
+            burger to the Menu, and then devour it.</p>
+    </div>
+</div>
+
+<div class="container-fluid" style="background-color:white;opacity:0.8;">
+    <div class="container">
+        {{!-- Menu and Devoured List --}}
+        <div class="row">
+            {{!-- MENU --}}
+            <div class="col-md-6 text-center">
+                <h2>The Burger Menu</h2>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless this.devoured}}
+                    <div class="">
+                        <form class="burgerButton" action="/burgers/update/{{this.id}}?_method=PUT" method="POST">
+                            <p class="menuItem">{{this.burger_name}}
+                                <input type="hidden" name="devoured" value="true"><button class="btn-danger"
+                                    type="submit">Devour it!</button>
+                            </p>
+                        </form>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+            {{!-- BURGERS EATEN --}}
+            <div class="col-md-6  text-center">
+                <h2>Devoured Burgers</h2>
+                <ul>
+                    {{#each burgers}}
+                    {{#if this.devoured}}
+                    <li>
+                        {{this.burger_name}}
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        {{!-- Begin Burger Addition Form  --}}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Add a Burger!</h2>
+                <form class="create-update-form" action="/api/burgers" method="POST">
+                    <div class="form-group">
+                        <p>Enter a burger you want to add to the Burger Menu click the Submit button.</p>
+                        <input type="text" id="ca" name="burger_name">
+                    </div>
+                    <button class="btn-success" type="submit">Submit Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
