@@ -1,2 +1,2 @@
 #git should no longer track `node_modules` files
-node_modules/
+/node_modules
