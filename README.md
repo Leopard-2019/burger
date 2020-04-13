@@ -4,7 +4,7 @@ Assignment: Node Express Handlebars - burger
 
 Overview:
 
-The app can be accessed live by clicking this link: 
+The app can be accessed live by clicking this link: https://hidden-shore-98291.herokuapp.com/
 
 In this assignment, It has been created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.
 
