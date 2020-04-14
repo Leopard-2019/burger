@@ -1,8 +1,11 @@
 
-# burger #
+# Eat-Da-Burger #
 
 
-Overview:
+### Restaurant app using Node, Express, Handlebars ###
+
+This full-stack application displays a list of burgers from a database. If the burger has been eaten (in other words, if the stored 'devoured' column is set to 'true' for that burger), it is displayed on the right side of the page. Otherwise the burger is displayed on the left.
+
 
 The app is deployed at: https://hidden-shore-98291.herokuapp.com/
 
